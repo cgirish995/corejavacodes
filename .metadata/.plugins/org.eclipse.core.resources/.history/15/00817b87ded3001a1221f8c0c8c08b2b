@@ -1,0 +1,48 @@
+
+public class Bike {
+	
+	
+	//Instance Objects or States of Objects 
+	String company;
+	String bikeName;
+	int regNo;
+	boolean isGeared;
+	
+	
+	//Methods or Behaviour
+	
+	void TurningOnAndOff(){
+		System.out.println("Bike Is Turning on and Off");
+	}
+	
+	void Running(){
+		System.out.println("Bike is Running Fast");
+	}
+
+	public static void main(String[] args) {
+	
+		
+		Bike splendor = new Bike ();
+		
+		// Mehods Calling 
+		System.out.println(	splendor.company);
+		System.out.println(	splendor.bikeName);
+		System.out.println(	splendor.regNo);
+		System.out.println(	splendor.isGeared);
+	
+		
+		//Assigning the values to Methods
+		splendor.company="Bajaj";
+		splendor.bikeName="Vpro";
+		splendor.regNo=214578;
+		splendor.isGeared=true;
+		
+		System.out.println(	splendor.company);
+		System.out.println(	splendor.bikeName);
+		System.out.println(	splendor.regNo);
+		System.out.println(	splendor.isGeared);
+	
+		
+	}
+
+}
