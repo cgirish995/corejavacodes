@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.workz.corejava.privateaccessmodifiers.DogTesters"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.PUBLIC_MEMBER"/>
+<fullyQualifiedTypeName name="com.facebook.instagram.login.User"/>
+<fullyQualifiedTypeName name="com.facebook.instagram.stories.User"/>
+<fullyQualifiedTypeName name="com.overriding.excercise.GrandSon"/>
+</qualifiedTypeNameHistroy>
