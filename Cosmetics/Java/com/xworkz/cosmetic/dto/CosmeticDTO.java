@@ -31,8 +31,6 @@ public class CosmeticDTO {
 		this.cosmeticshades = cosmeticshades;
 		this.quantity = quantity;
 	}
-	
-
 
 	/**
 	 * @return the brand
@@ -130,17 +128,16 @@ public class CosmeticDTO {
 		if (obj instanceof CosmeticDTO) {
 			CosmeticDTO casted = (CosmeticDTO) obj;
 			if (this.brand != null && this.cosmeticType != null) {
-				if (this.brand.equals(casted.getBrand()) && this.cosmeticType.equals(casted.getCosmeticType())){
-				System.out.println("cosmetic are equal " );
-				 return true;
-			}
-			System.out.println(" cosmetic dto is not equal");
-			return false;
+				if (this.brand.equals(casted.getBrand()) && this.cosmeticType.equals(casted.getCosmeticType())) {
+					System.out.println("cosmetic are equal ");
+					return true;
+				}
+				System.out.println(" cosmetic dto is not equal");
+				return false;
 			}
 
 		}
 		return false;
-	
-	
+
 	}
 }
