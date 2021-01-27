@@ -19,26 +19,37 @@ public class CosmeticTester {
 
 		
 		CosmeticDTO dto2 = new CosmeticDTO();
-		dto2.setBrand("lakme");
+		dto2.setBrand("parker");
 		dto2.setCosmeticshades(CosmeticShades.BLUE);
-		dto2.setCosmeticType(CosmeticType.TONER);
+		dto2.setCosmeticType(CosmeticType.LIPSTICK);
 		dto2.setPrice(120l);
 		dto2.setQuantity(1);
 		
+		
 		CosmeticDTO dto3 = new CosmeticDTO();
-		dto2.setBrand("Maybelline");
-		dto2.setCosmeticshades(CosmeticShades.BLACK);
-		dto2.setCosmeticType(CosmeticType.TONER);
-		dto2.setPrice(120l);
-		dto2.setQuantity(1);
+		dto3.setBrand("Maybelline");
+		dto3.setCosmeticshades(CosmeticShades.BLUE);
+		dto3.setCosmeticType(CosmeticType.TONER);
+		dto3.setPrice(120l);
+		dto3.setQuantity(1);
 		
 		
 		
 	
-		CosmeticDAO dto = new CosmeticDAOImpl();
-		dto.save(dto1);
-		dto.save(dto2);
-		dto.save(dto3);
+		CosmeticDAO dao = new CosmeticDAOImpl();
+		dao.save(dto1);
+		//dao.save(dto2);
+		dao.save(dto3);
+	
+		
+		
+		
+		boolean updatePriceAndQuantityByBrand = dao.updatePriceAndQuantityByBrand(2500, 5, "parker");
+		System.out.println(updatePriceAndQuantityByBrand);
+		
+		
+		boolean updatePriceByBrandAndype = dao.updatePriceByBrandAndype(900, "Maybelline", CosmeticType.TONER);
+		System.out.println(updatePriceByBrandAndype);
 		
 		//CosmeticDTO dto3 = new CosmeticDTO("Parker",CosmeticType.LIPSTICK,250,CosmeticShades.BROWN,2);
 		
