@@ -94,4 +94,26 @@ public class SchoolDAOImpl implements SchoolDAO {
 		return this.schoollist.size();
 	}
 
+	@Override
+	public List<SchoolDTO> getAll() {
+
+		return this.schoollist;
+	}
+
+	@Override
+	public SchoolDTO getAllTheInformationUsingSchoolName(String name) {
+		System.out.println("Invoked getAllTheInformationUsingSchoolName");
+		System.out.println("name " + name);
+		for (SchoolDTO school : schoollist) {
+			String nameOfTheSchool = school.getNameOfTheSchool();
+			if (nameOfTheSchool != null && nameOfTheSchool.equals(name)) {
+				System.out.println("Name of the school found");
+				return school;
+			}
+
+		}
+		System.out.println("Name of the school not found");
+		return null;
+	}
+
 }

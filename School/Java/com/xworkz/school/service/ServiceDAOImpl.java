@@ -1,5 +1,7 @@
 package com.xworkz.school.service;
 
+import java.util.List;
+
 import com.xworkz.school.dao.SchoolDAO;
 import com.xworkz.school.dto.SchoolDTO;
 
@@ -55,6 +57,19 @@ public class ServiceDAOImpl implements ServiceDAO {
 	}
 
 	@Override
+	public SchoolDTO findSchoolName(String name) {
+		System.out.println("Invoked findSchoolName");
+		System.out.println("name" + name);
+		if (name != null && !name.contains(" ") && !name.isEmpty()) {
+			System.out.println("School found");
+			return this.schoolDAO.findSchoolName(name);
+		}
+		System.out.println("School not found");
+		return null;
+
+	}
+
+	@Override
 	public boolean updateSchoolAddressBySchoolName(String address, String name) {
 		System.out.println("Invoked updateSchoolAddressBySchoolName");
 		System.out.println("address" + address);
@@ -80,6 +95,20 @@ public class ServiceDAOImpl implements ServiceDAO {
 		}
 
 		return false;
+	}
+
+	@Override
+	public List<SchoolDTO> getAll() {
+		System.out.println("Retrieving all the elements from collection");
+		return this.schoolDAO.getAll();
+	}
+
+	@Override
+	public SchoolDTO getAllTheInformationUsingSchoolName(String name) {
+		if (name != null && !name.contains(" ") && !name.isEmpty()) {
+			return this.schoolDAO.getAllTheInformationUsingSchoolName(name);
+		}
+		return null;
 	}
 
 }
